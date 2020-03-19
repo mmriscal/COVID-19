@@ -1,0 +1,55 @@
+---
+title: "COVID-19"
+author: "Manuel Mariscal"
+date: "19/3/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+This presentation is part of the Developing Data Products Coursera.org course project submission.
+
+It is an R Presentation generated with RStudio.
+
+The Shiny application pitched by this presentation is at https://mmriscal.shinyapps.io/COVID/
+
+## The app
+
+The app plots different graphics of the evolution of COVID-19 in China, Spain and Italy. The user
+can select what country must be plotted and the type of graphic. 
+
+The user can gather information about new cases, new deaths, total cases or total deaths related to 
+the virus. All the information is continuosly updated online.
+
+More information about the data can be found in: https://covid.ourworldindata.org
+
+
+## Code 1
+
+I found a lot of difficulties in downloading the dataset while the app is running in shinyapp.io. Finally,
+the following code worked:
+
+```{r eval=FALSE, echo=TRUE}
+data <- read.csv("https://covid.ourworldindata.org/data/full_data.csv")
+```
+
+I also struggled with the user interface. I decided to use columns:
+
+```{r eval=FALSE, echo=TRUE}
+fluidRow
+    (
+        column(3, offset = 1,
+               h4("Select country"),
+``` 
+
+## More information
+
+You can e-mail me at mmriscal@gmail.com for further information. All the code can be found in 
+
+
+
+
